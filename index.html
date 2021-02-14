@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>张粟东&安佳瑶的情侣空间</title>
+		<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital-7_mono.ttf') format("truetype");
+		}
+
+        *{margin:0px;
+          padding: 0px;
+        }
+        .snowfall-flakes:before,.snowfall-flakes:after{
+            content: "";/*内容 激活伪元素的必要因素*/
+            position: absolute;
+            width: 20px;
+            height: 30px;
+            background-color: #FFB6C1;
+            border-radius: 10px 10px 0 0;
+            transform: rotate(-45deg);
+        }
+        .snowfall-flakes:after{
+            content: "";
+            transform: rotate(45deg);
+            left: 7px;
+        }
+        body,html{
+            height: 100%;
+            width: 100%;
+        }
+        body {
+            overflow: hidden;/*超出部分被修剪，且不可见*!*/
+            background: url("images/3.jpg");
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+		</style>
+		
+		<link href="css/default.css" type="text/css" rel="stylesheet">
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/garden.js"></script>
+		<script type="text/javascript" src="js/functions.js"></script>
+
+<audio autoplay="autopaly" loop="loop" controls="controls" id="audios">
+    <source src="z&l.mp3" type="audio/mp3" />
+</audio>
+		</head>
+		
+		<body>
+		
+ <div class="box">
+    <div class="left"></div>
+    <div class="right"></div>
+    <script src="js/jquery-1.2.6.min.js"></script>
+    <script src="js/snowfall.jquery.js"></script>
+    <script>
+        $(document).snowfall({
+            falkeCount:10//设置爱心数目
+        })
+    </script>
+</div>
+	              
+		<div id="mainDiv">
+			<div id="content">
+				<div id="code">
+					<span class="comments">/**</span><br />
+					<span class="space"/><span class="comments">*2000-09-15,</span><br />
+					<span class="space"/><span class="comments">*2001-07-16.</span><br />
+					<span class="space"/><span class="comments">*/</span><br />
+					Boy name = <span class="keyword">Mr</span> Zhang<br />
+					Girl name = <span class="keyword">Mrs</span> An<br />
+					<span class="comments">// Fall in love river. </span><br />
+					The boy love the girl;<br />
+					<span class="comments">// They love each other.</span><br />
+					The girl loved the boy;<br />
+					<span class="comments">// AS time goes on.</span><br />
+					The boy can not be separated the girl;<br />
+					<span class="comments">// At the same time.</span><br />
+					The girl can not be separated the boy;<br />
+					<span class="comments">// Both wind and snow all over the sky.</span><br />
+					<span class="comments">// Whether on foot or 5 kilometers.</span><br />
+					<span class="keyword">The boy</span> very <span class="keyword">happy</span>;<br />
+					<span class="keyword">The girl</span> is also very <span class="keyword">happy</span>;<br />
+					<span class="placeholder"/><span class="comments">// Whether it is right now</span><br />
+					<span class="placeholder"/><span class="comments">// Still in the distant future.</span><br />
+					<span class="placeholder"/>The boy has but one dream;<br />
+					<span class="comments">// The boy wants the girl could well have been happy.</span><br />
+					<br>
+					<br>
+					I want to say:<br />
+					Baby, I love you forever;<br />
+				</div>
+				<div id="loveHeart">
+					<canvas id="garden"></canvas>
+					<div id="words">
+						<div id="messages">
+							亲爱的，这是我们相爱在一起的时光。
+							<div id="elapseClock"></div>
+						</div>
+						<div id="loveu">
+							爱你直到永永远远。<br/>
+							<div class="signature">- 爱你的人</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="copyright">
+				<a href="#">....</a><br />
+				<a href="#">....</a><br />
+				
+			</div>
+		</div>
+		
+		<script type="text/javascript">
+		var offsetX = $("#loveHeart").width() / 2;
+		var offsetY = $("#loveHeart").height() / 2 - 55;
+		var together = new Date();
+		together.setFullYear(2021, 1, 14);//真实日期是2020.12.17 晚上8点
+		together.setHours(9);
+		together.setMinutes(0);
+		together.setSeconds(0);
+		together.setMilliseconds(0);
+		
+		if (!document.createElement('canvas').getContext) {
+			var msg = document.createElement("div");
+			msg.id = "errorMsg";
+			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
+			document.body.appendChild(msg);
+			$("#code").css("display", "none")
+			$("#copyright").css("position", "absolute");
+			$("#copyright").css("bottom", "10px");
+			document.execCommand("stop");
+		} else {
+			setTimeout(function () {
+				startHeartAnimation();
+			}, 5000);
+		
+			timeElapse(together);
+			setInterval(function () {
+				timeElapse(together);
+			}, 500);
+		
+			adjustCodePosition();
+			$("#code").typewriter();
+		}
+		</script>
+
+
+		</body>
+		</html>
+		
